@@ -4,23 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <title>Namaste Yoga</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <h1 class="logo"><a href="#">Namaste Yoga</a></h1>
-            <ul>
-                <li><a href="#">Online Classes</a></li>
-                <li><a href="#">Our Trainers</a></li>
-                <li><a href="#">Articles</a></li>
-                <li><a href="#">Subscriptions</a></li>
+    <header class="header-container">
+        <nav class="header-nav-container">
+            <h1 class="logo"><a href="#" class="logo-text">Namaste Yoga</a></h1>
+            <ul class="header-menu">
+                <li class="header-menu__li"><a href="#" class="header-li__link">Online Classes</a></li>
+                <li class="header-menu__li"><a href="#" class="header-li__link">Our Trainers</a></li>
+                <li class="header-menu__li"><a href="#" class="header-li__link">Articles</a></li>
+                <li class="header-menu__li"><a href="#" class="header-li__link">Subscriptions</a></li>
             </ul>
-            <div class="header-buttons">
-                <button>Login</button>
-                <button>Register</button>
-            </div>
         </nav>
+        <div class="header-buttons">
+            <button class="btn btn-transparent">
+                <span class="btn-icon-background">
+                    <img src="./images/circle-right-regular.svg" alt="Sign in" class="btn-icon">
+                </span>
+                Sign In
+            </button>
+            <button class="btn btn-full">
+                <span class="btn-icon-background">
+                    <img src="./images/plus-solid.svg" alt="Register" class="btn-icon">
+                </span>
+                Register
+            </button>
+        </div>
     </header>
     <main>
         <section class="carousel">
@@ -33,31 +47,43 @@
                 <img src="./images/yoga-webshop.png" alt="yoga webshop"/>
             </div>
         </section>
-        <section>
+        <section class="classes">
             <div class="yoga-class-card">
                 <h2>Beginner Hatha Yoga</h2>
                 <img src="./images/yoga-class.png" alt="yoga-class">
                 <p>lorem</p>
+                <div class="badges">
+                    <span class="badge">Beginner</span>
+                    <spna class="badge">Hatha</spna>
+                </div>
             </div>
             <div class="yoga-class-card">
                 <h2>Intermediate Hatha Yoga</h2>
                 <img src="./images/yoga-class.png" alt="yoga-class">
                 <p>lorem</p>
+                <div class="badges">
+                    <span class="badge">Intermediate</span>
+                    <spna class="badge">Hatha</spna>
+                </div>
             </div>
             <div class="yoga-class-card">
                 <h2>Advanced Hatha Yoga</h2>
                 <img src="./images/yoga-class.png" alt="yoga-class">
                 <p>lorem</p>
+                <div class="badges">
+                    <span class="badge">Advanced</span>
+                    <spna class="badge">Hatha</spna>
+                </div>
             </div>
         </section>
-        <section>
+        <section class="register">
             <h2>Namaste Yoga Classes</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates officiis at rem.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo veniam vitae maiores nisi ullam, placeat impedit maxime aut rerum? Commodi eos libero tempore quae? Iste.</p>
             <button>Register</button>
             <img src="./images/yoga-class.png" alt="yoga-class">
         </section>
-        <section>
+        <section class="tickets">
             <h2>Tickets</h2>
             <div>
                 <h3>Monthly ticket</h3>
@@ -80,7 +106,42 @@
                 <button>Buy</button>
             </div>
         </section>
+        <section class="blog">
+            <div class="blog-thumbnail">
+                <h2>What is yoga?</h2>
+                <img src="./images/yoga-class.png" alt="yoga-class">
+                <p>lorem</p>
+                <time datetime="2022-02-14 19:00">Valentines day</time>
+            </div>
+            <div class="blog-thumbnail">
+                <h2>Poses</h2>
+                <img src="./images/yoga-class.png" alt="yoga-class">
+                <p>lorem</p>
+                <time datetime="2022-02-14 19:00">Valentines day</time>
+            </div>
+            <div class="blog-thumbnail">
+                <h2>Meditation</h2>
+                <img src="./images/yoga-class.png" alt="yoga-class">
+                <p>lorem</p>
+                <time datetime="2022-02-14 19:00">Valentines day</time>
+            </div>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <nav>
+            <ul class="social-link">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+            <ul class="footer-link">
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Impressum</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Tickets</a></li>
+            </ul>
+        </nav>
+        <p>Copyright &copy; Namaste Yoga 2022</p>
+    </footer>
 </body>
 </html>
