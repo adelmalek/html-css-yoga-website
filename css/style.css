@@ -20,6 +20,14 @@ body {
     background-color: var(--secondary-color);
 }
 
+.d-none {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+}
+
 /* HEADER */
 .header-container {
     display: flex;
@@ -96,4 +104,252 @@ body {
 .btn-icon {
     height: 1.6rem;
     vertical-align: text-top;
+}
+
+/* CAROUSEL */
+.carousel {
+    height: 500px;
+}
+
+.carousel-img {
+    height: 100%;
+    background-size: 100%;
+    background-position: top center;
+}
+
+.carousel-img-1 {
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), 
+        url(../images/yoga-class.png);
+}
+
+.carousel-img-2 {
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0)), 
+        url(../images/yoga-shop.png);
+}
+
+.carousel-title {
+    font-size: 4.8rem;
+    padding-top: 8rem;
+    text-align: center;
+    text-shadow: 0 0 2px rgb(255, 255, 255);
+}
+
+/* CLASSES */
+.classes {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5rem 0;
+}
+
+.yoga-class-card {
+    width: 28%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-areas: 
+        "img"
+        "title"
+        "p"
+        "badges";
+}
+
+.yoga-class-card__title {
+    grid-area: title;
+    margin: 2rem 0 0.5rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.yoga-class-card__img {
+    max-width: 100%;
+    grid-area: img;
+}
+
+.yoga-class-card__p {
+    grid-area: p;
+    margin: 0.5rem 0 1rem 2rem;
+}
+
+.yoga-class-card__badges {
+    grid-area: badges;
+    margin: 0.5rem 2rem 1.5rem;
+}
+
+.yoga-class-card__badges .badge {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 0.5rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+/* REGISTER */
+.register {
+    min-height: 300px;
+    display: flex;
+}
+
+.register-text-container {
+    width: 50%;
+    margin-left: 3.5rem;
+}
+
+.register-img {
+    background-image: url(../images/yoga-register.png);
+    background-size: 100%;
+    background-position-y: 80%;
+    width: 40%;
+    margin: 0 3%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.register__heading {
+    text-align: center;
+    font-weight: 500;
+    font-size: 3rem;
+}
+
+.register__p {
+    margin: 1rem 2rem;
+    font-size: 1.4rem;
+}
+
+.register__btn {
+    margin: 1rem 2rem;
+    padding: 1rem 2rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 1px rgba(49, 49, 49, 0.5);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.4);
+    border: none;
+}
+
+.register__btn:hover {
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* TICKETS */
+.tickets {
+    background-color: var(--primary-color);
+    margin: 3rem 0;
+    padding: 2rem;
+}
+
+.tickets__heading {
+    text-align: center;
+    font-weight: 500;
+    font-size: 3rem;
+    color: var(--secondary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.tickets__container {
+    display: flex;
+    justify-content: center;
+}
+
+.tickets-container__card {
+    background-color: var(--secondary-color);
+    margin: 2.5rem;
+    padding: 1.5rem;
+}
+
+.tickets__title {
+    font-size: 2.4rem;
+    letter-spacing: 1px;
+    font-size: 500;
+    text-align: center;
+    border: 3px solid var(--primary-color);
+    padding: 1rem 0.5rem;
+}
+
+.tickets__price {
+    display: block;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.tickets__features {
+    list-style: none;
+    padding: 1.5rem;
+}
+
+.tickets__features > li {
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+.tickets__features > li::before {
+    content: "✓";
+    font-weight: 800;
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: var(--primary-color);
+}
+
+.tickets__btn {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    border: none;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    display: block;
+    margin: 1rem auto;
+}
+
+.tickets__btn:hover {
+    box-shadow: 2px 2px 3px black;
+    text-shadow: 1px 1px 2px black;
+}
+
+/* BLOG */
+.blog {
+    display: flex;
+    margin: 2rem;
+}
+
+.blog-thumbnail {
+    margin: 1rem;
+    display: grid;
+    grid-template-areas: 
+        "thumbnail-image thumbnail-title"
+        "thumbnail-image thumbnail-text";
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
+    background-color: white;
+    position: relative;
+}
+
+.blog-thumbnail > h2 {
+    grid-area: thumbnail-title;
+    padding-top: 1rem;
+}
+
+.blog-thumbnail > p {
+    grid-area: thumbnail-text;
+    padding: 0.5rem 0;
+}
+
+.blog-thumbnail > time {
+    position: absolute;
+    left: calc(14vw + 1rem);
+    bottom: 1rem;
+}
+
+.blog-thumbnail__image {
+    background-image: url(../images/yoga-class.png);
+    background-position: center center;
+    background-size: cover;
+    width: 14vw;
+    height: 14vw;
+    grid-area: thumbnail-image;
+    margin-right: 1rem;
 }
