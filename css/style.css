@@ -1,7 +1,8 @@
 /* RESET */
 :root {
-    --primary-color: rgb(255, 17, 57);
+    --primary-color: #ff1139;
     --secondary-color: whitesmoke;
+    --card-length: 14vw;
 }
 
 html {
@@ -24,10 +25,6 @@ body {
     display: none;
 }
 
-img {
-    max-width: 100%;
-}
-
 /* HEADER */
 .header-container {
     display: flex;
@@ -46,9 +43,12 @@ img {
 }
 
 .logo-text {
+    display: inline-block;
+    height: 3.5rem;
     font-size: 2.4rem;
     text-decoration: none;
     color: var(--primary-color);
+    padding-right: 2rem;
 }
 
 .header-menu {
@@ -60,7 +60,7 @@ img {
     font-weight: 700;
     color: var(--primary-color);
     text-decoration: none;
-    margin-left: 1rem;
+    margin-left: 2.3rem;
 }
 
 .header-li__link:hover,
@@ -106,6 +106,15 @@ img {
     vertical-align: text-top;
 }
 
+.d-none-992 {
+    font-size: 1.4rem;
+}
+
+.hamburger-menu,
+.hamburger-menu-exit {
+    display: none;
+}
+
 /* CAROUSEL */
 .carousel {
     height: 500px;
@@ -113,14 +122,14 @@ img {
 
 .carousel-img {
     height: 100%;
-    background-size: 100%;
-    background-position: top center;
 }
 
 .carousel-img-1 {
     background-image: 
         linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), 
         url(../images/yoga-class.png);
+    background-size: cover;
+    background-position: bottom center;
 }
 
 .carousel-img-2 {
@@ -156,7 +165,7 @@ img {
 
 .yoga-class-card__title {
     grid-area: title;
-    margin: 2rem 0 0.5rem 2rem;
+    margin: 2rem 0.5rem;
     font-size: 1.6rem;
     font-weight: 500;
 }
@@ -168,12 +177,12 @@ img {
 
 .yoga-class-card__p {
     grid-area: p;
-    margin: 0.5rem 0 1rem 2rem;
+    margin: 2rem 0.5rem;
 }
 
 .yoga-class-card__badges {
     grid-area: badges;
-    margin: 0.5rem 2rem 1.5rem;
+    margin: 1rem 0.5rem;
 }
 
 .yoga-class-card__badges .badge {
@@ -188,19 +197,19 @@ img {
 .register {
     min-height: 300px;
     display: flex;
+    margin: 1rem;
 }
 
 .register-text-container {
     width: 50%;
-    margin-left: 3.5rem;
+    margin: 1rem;
 }
 
 .register-img {
     background-image: url(../images/yoga-register.png);
-    background-size: 100%;
-    background-position-y: 80%;
+    background-size: cover;
     width: 40%;
-    margin: 0 3%;
+    margin: 0 1rem;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
@@ -211,12 +220,12 @@ img {
 }
 
 .register__p {
-    margin: 1rem 2rem;
+    margin: 1rem 4rem;
     font-size: 1.4rem;
 }
 
 .register__btn {
-    margin: 1rem 2rem;
+    margin: 1rem 4rem;
     padding: 1rem 2rem;
     background-color: var(--primary-color);
     color: var(--secondary-color);
@@ -314,42 +323,169 @@ img {
 /* BLOG */
 .blog {
     display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     margin: 2rem;
 }
 
 .blog-thumbnail {
     margin: 1rem;
+    padding-right: 1rem;
     display: grid;
-    grid-template-areas: 
-        "thumbnail-image thumbnail-title"
-        "thumbnail-image thumbnail-text";
+    grid-template-areas: "thumbnail-image thumbnail-content";
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.6);
     background-color: white;
+}
+
+.blog-thumbnail__content {
+    grid-area: thumbnail-content;
+    width: var(--card-length);
+    height: var(--card-length);
+    overflow: hidden;
+    padding-top: 1rem;
+    padding-right: 1rem;
     position: relative;
 }
 
-.blog-thumbnail > h2 {
-    grid-area: thumbnail-title;
-    padding-top: 1rem;
-}
-
-.blog-thumbnail > p {
-    grid-area: thumbnail-text;
-    padding: 0.5rem 0;
-}
-
-.blog-thumbnail > time {
+.blog-thumbnail__content > time {
     position: absolute;
-    left: calc(14vw + 1rem);
-    bottom: 1rem;
+    left: 0;
+    bottom: 0;
+    padding: 2rem 0 1rem 0;
+    width: var(--card-length);
+    background-image: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
 }
 
 .blog-thumbnail__image {
     background-image: url(../images/yoga-class.png);
     background-position: center center;
     background-size: cover;
-    width: 14vw;
-    height: 14vw;
-    grid-area: thumbnail-image;
+    width: var(--card-length);
+    height: var(--card-length);
     margin-right: 1rem;
+    grid-area: thumbnail-image;
+}
+
+/* FOOTER */
+
+footer {
+    border-top: 0.5rem solid var(--primary-color);
+    padding-top: 2rem;
+}
+
+.footer__links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footer-links__a {
+    margin: 2rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.footer__copyright {
+    display: block;
+    margin: 1rem;
+    text-align: center;
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 1.5rem;
+}
+
+.icon {
+    display: inline-block;
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 1rem;
+}
+
+.facebook-icon {
+    background-image: url(../images/facebook-brands.svg);
+}
+
+.instagram-icon {
+    background-image: url(../images/instagram-brands.svg);
+}
+
+.twitter-icon {
+    background-image: url(../images/twitter-brands.svg);
+}
+
+
+/* MEDIA QUERIES */ 
+@media screen and (max-width: 992px) {
+    :root {
+        --card-length: 20vw;
+    }
+
+    .d-none-992 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --card-length: 35vw;
+    }
+    
+    .header-menu,
+    .header-buttons {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .blog-thumbnail__content {
+        min-width: 15px;
+        min-height: 150px;
+    }
+
+    .blog-thumbnail__image {
+        min-width: 15px;
+        min-height: 150px;
+    }
+    
+    .blog-thumbnail > time {
+        min-width: 150px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .classes {
+        flex-wrap: wrap;
+    }
+    .yoga-class-card {
+        width: 70%;
+        margin-bottom: 3rem;
+    }
+
+    .register-img {
+        display: none;
+    }
+
+    .register-text-container {
+        width: 90%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

@@ -15,8 +15,9 @@
         <nav class="header-nav-container">
             <h1 class="logo"><a href="#" class="logo-text">Namaste Yoga</a></h1>
             <ul class="header-menu">
-                <li class="header-menu__li"><a href="#" class="header-li__link">Online Classes</a></li>
-                <li class="header-menu__li"><a href="#" class="header-li__link">Our Teachers</a></li>
+                <img src="./images/circle-xmark-solid.svg" alt="close-navigation" class="hamburger-menu-exit">
+                <li class="header-menu__li"><a href="#" class="header-li__link">Classes</a></li>
+                <li class="header-menu__li"><a href="#" class="header-li__link">Teachers</a></li>
                 <li class="header-menu__li"><a href="#" class="header-li__link">Blog</a></li>
                 <li class="header-menu__li"><a href="#" class="header-li__link">Membership</a></li>
             </ul>
@@ -26,15 +27,16 @@
                 <span class="btn-icon-background">
                     <img src="./images/circle-right-regular.svg" alt="Sign in" class="btn-icon">
                 </span>
-                Sign In
+                <span class="d-none-992">Sign In</span>
             </button>
             <button class="btn btn-full">
                 <span class="btn-icon-background">
                     <img src="./images/plus-solid.svg" alt="Register" class="btn-icon">
                 </span>
-                Register
+                <span class="d-none-992">Register</span>
             </button>
         </div>
+        <img src="./images/bars-solid.svg" alt="hamburger-menu-icon" class="hamburger-menu">
     </header>
     <main>
         <section class="carousel">
@@ -49,7 +51,9 @@
             <div class="yoga-class-card">
                 <h2 class="yoga-class-card__title">Beginner Hatha Yoga</h2>
                 <img src="./images/yoga-beginner.png" alt="yoga-class" class="yoga-class-card__img">
-                <p class="yoga-class-card__p">Poses for beginners</p>
+                <p class="yoga-class-card__p">
+                    These beginner yoga poses will help you create a strong foundation.
+                </p>
                 <div class="badges yoga-class-card__badges">
                     <span class="badge">Beginner</span>
                     <span class="badge">Hatha</span>
@@ -88,7 +92,7 @@
             <div class="tickets__container">
                 <div class="tickets-container__card">
                     <h3 class="tickets__title">Monthly ticket</h3>
-                    <strong class="tickets__price">HUF 13.500.-</strong>
+                    <strong class="tickets__price">EUR 35,5</strong>
                     <ul class="tickets__features">
                         <li>Valuable until 30 days</li>
                         <li>Valid for daily one entrance</li>
@@ -98,7 +102,7 @@
                 </div>
                 <div class="tickets-container__card">
                     <h3 class="tickets__title">Year ticket</h3>
-                    <strong class="tickets__price">HUF 99.900.-</strong>
+                    <strong class="tickets__price">EUR 268,5</strong>
                     <ul class="tickets__features">
                         <li>Valuable until 1 year</li>
                         <li>Valid for daily one entrance</li>
@@ -110,43 +114,68 @@
         </section>
         <section class="blog">
             <div class="blog-thumbnail">
-                <h2>What is yoga?</h2>
                 <div class="blog-thumbnail__image"></div>
-                <p>Yoga helps to discipline body and mind. 
-                   It is an exercise that can be done by anyone who wants to do it.</p>
-                <time datetime="2022-02-14 19:00">2022-02-14</time>
+                <div class="blog-thumbnail__content">
+                    <h2>What is yoga?</h2>
+                    <p>
+                       Yoga helps to discipline body and mind. 
+                       It is an exercise that can be done by anyone who wants to do it.
+                    </p>
+                    <time datetime="2022-02-14 19:00">2022-02-14</time>
+                </div>
             </div>
             <div class="blog-thumbnail">
-                <h2>Poses</h2>
                 <div class="blog-thumbnail__image"></div>
-                <p>Move slowly through each pose, remembering to breathe as you move. </p>
-                <time datetime="2022-01-7 19:00">2022-01-7</time>
+                <div class="blog-thumbnail__content">
+                    <h2>Poses</h2>
+                    <p>
+                        These 10 poses are a complete yoga workout. 
+                        Move slowly through each pose, 
+                        remembering to breathe as you move. 
+                        Pause after any pose you find challenging, 
+                        especially if you are short of breath, 
+                        and start again when your breathing returns to normal. 
+                        The idea is to hold each pose for a few, 
+                        slow breaths before moving on to the next one.
+                    </p>
+                    <time datetime="2022-01-7 19:00">2022-01-7</time>
+                </div>
             </div>
             <div class="blog-thumbnail">
-                <h2>Meditation</h2>
                 <div class="blog-thumbnail__image"></div>
-                <p>When we pay attention to our breath, we are learning how to return to, 
-                   and remain in, the present moment—to anchor ourselves in the here and now on purpose, 
-                   without judgement.</p>
-                <time datetime="2021-12-20 19:00">2021-12-20</time>
+                <div class="blog-thumbnail__content">
+                    <h2>Meditation</h2>
+                    <p>
+                       When we pay attention to our breath, we are learning how to return to, 
+                       and remain in, the present moment—to anchor ourselves in the here 
+                       and now on purpose, without judgement.
+                    </p>
+                    <time datetime="2021-12-20 19:00">2021-12-20</time>
+                </div>
             </div>
         </section>
     </main>
     <footer>
         <nav>
-            <ul class="social-link">
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Instagram</a></li>
-                <li><a href="#">Twitter</a></li>
+            <ul class="footer__links">
+                <li><a href="#" class="footer-links__a">Privacy</a></li>
+                <li><a href="#" class="footer-links__a">Impressum</a></li>
+                <li><a href="#" class="footer-links__a">Contact</a></li>
+                <li><a href="#" class="footer-links__a">Tickets</a></li>
             </ul>
-            <ul class="footer-link">
-                <li><a href="#">Privacy</a></li>
-                <li><a href="#">Impressum</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Tickets</a></li>
+            <ul class="footer__social">
+                <li><a href="#">
+                    <span class="icon facebook-icon"></span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icon instagram-icon"></span>
+                </a></li>
+                <li><a href="#">
+                    <span class="icon twitter-icon"></span>
+                </a></li>
             </ul>
         </nav>
-        <p>Copyright &copy; Namaste Yoga 2022</p>
+        <p class="footer__copyright">Copyright &copy; Namaste Yoga 2022</p>
     </footer>
 </body>
 </html>
