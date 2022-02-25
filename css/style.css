@@ -1,7 +1,7 @@
 /* RESET */
 :root {
     --primary-color: #ff1139;
-    --secondary-color: whitesmoke;
+    --secondary-color: #f5f5f5;
     --card-length: 14vw;
 }
 
@@ -40,22 +40,38 @@ body {
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 }
 
-.header-nav-container {
-    display: flex;
-    align-items: center;
-}
-
-.header-menu {
-    display: flex;
-}
-
 .logo-text {
     display: inline-block;
     height: 3.5rem;
     font-size: 2.4rem;
     text-decoration: none;
     color: var(--primary-color);
-    padding-top: 1rem;
+    padding-top: 0.8rem;
+}
+
+.open-navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hamburger-menu-exit {
+    display: none;
+    width: 3rem;
+    height: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+}
+
+.header-nav-container {
+    display: flex;
+    align-items: center;
+    padding-right: 5rem;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: space-around;
 }
 
 .header-menu {
@@ -123,7 +139,7 @@ body {
 }
 
 main {
-    margin-top: 8rem;
+    margin-top: 7rem;
 }
 
 /* CAROUSEL */
@@ -153,7 +169,7 @@ main {
 
 .carousel-title {
     font-size: 4.8em;
-    padding-top: 1.5rem;
+    padding-top: 1.8rem;
     text-align: center;
     text-shadow: 0 0 2px rgb(255, 255, 255);
 }
@@ -457,18 +473,19 @@ footer {
     :root {
         --card-length: 35vw;
     }
-    
-    .header-menu,
+
+    .header-nav-container,
     .header-buttons {
         display: none;
     }
 
     .hamburger-menu {
-        display: block;
+        display: block;;
         width: 4rem;
         height: 4rem;
+        cursor: pointer;
     }
-
+    
     .blog-thumbnail__content {
         min-width: 15px;
         min-height: 150px;
@@ -515,3 +532,54 @@ footer {
         justify-content: space-evenly;
     }
 }
+
+/* OPEN NAVIGATION */
+.js-d-none {
+    display: none;
+}
+
+.js-open-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-right: 2rem;
+    background-color: var(--primary-color);
+    width: 60%;
+    height: 70vh;
+}
+
+.js-exit {
+    display: flex;
+}
+
+.js-nav-container {
+    display: flex;
+    padding-right: 0;
+}
+
+.js-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+    color: var(--secondary-color);
+}
+
+.js-menu__li {
+    padding-bottom: 3rem;
+}
+
+.js-m-li__link {
+    color: var(--secondary-color);
+}
+
+.js-h-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+
