@@ -129,18 +129,20 @@ body {
         linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), 
         url(../images/yoga-class.png);
     background-size: cover;
-    background-position: bottom center;
+    background-position: center center;
 }
 
 .carousel-img-2 {
     background-image: 
         linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0)), 
         url(../images/yoga-shop.png);
+    background-size: cover;
+    background-position: center center;
 }
 
 .carousel-title {
-    font-size: 4.8rem;
-    padding-top: 8rem;
+    font-size: 4.8em;
+    padding-top: 1.5rem;
     text-align: center;
     text-shadow: 0 0 2px rgb(255, 255, 255);
 }
@@ -208,6 +210,7 @@ body {
 .register-img {
     background-image: url(../images/yoga-register.png);
     background-size: cover;
+    background-position: center center;
     width: 40%;
     margin: 0 1rem;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
@@ -362,7 +365,7 @@ body {
 }
 
 .blog-thumbnail__image {
-    background-image: url(../images/yoga-class.png);
+    background-image: url(../images/namaste.png);
     background-position: center center;
     background-size: cover;
     width: var(--card-length);
@@ -380,6 +383,7 @@ footer {
 
 .footer__links {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     list-style: none;
 }
@@ -487,5 +491,16 @@ footer {
         text-align: center;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .tickets__container {
+        flex-direction: column;
+        width: 95%;
+        min-width: 20rem;
+        margin: 1rem auto;
+    }
+
+    .footer__links {
+        justify-content: space-evenly;
     }
 }
