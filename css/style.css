@@ -29,8 +29,15 @@ body {
 .header-container {
     display: flex;
     justify-content: space-between;
-    margin: 2rem 1.5rem;
+    padding: 2rem 1.5rem;
     font-size: 1.6rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
 }
 
 .header-nav-container {
@@ -48,7 +55,7 @@ body {
     font-size: 2.4rem;
     text-decoration: none;
     color: var(--primary-color);
-    padding-right: 2rem;
+    padding-top: 1rem;
 }
 
 .header-menu {
@@ -113,6 +120,10 @@ body {
 .hamburger-menu,
 .hamburger-menu-exit {
     display: none;
+}
+
+main {
+    margin-top: 8rem;
 }
 
 /* CAROUSEL */
