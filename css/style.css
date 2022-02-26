@@ -25,6 +25,7 @@ body {
     display: none;
 }
 
+
 /* HEADER */
 .header-container {
     display: flex;
@@ -138,9 +139,12 @@ body {
     display: none;
 }
 
+
+/* MAIN */
 main {
     margin-top: 7rem;
 }
+
 
 /* CAROUSEL */
 .carousel {
@@ -173,6 +177,7 @@ main {
     text-align: center;
     text-shadow: 0 0 2px rgb(255, 255, 255);
 }
+
 
 /* CLASSES */
 .classes {
@@ -222,6 +227,7 @@ main {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
 }
 
+
 /* REGISTER */
 .register {
     min-height: 300px;
@@ -270,6 +276,7 @@ main {
 .register__btn:hover {
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.7);
 }
+
 
 /* TICKETS */
 .tickets {
@@ -350,6 +357,7 @@ main {
     text-shadow: 1px 1px 2px black;
 }
 
+
 /* BLOG */
 .blog {
     display: flex;
@@ -401,8 +409,8 @@ main {
     grid-area: thumbnail-image;
 }
 
-/* FOOTER */
 
+/* FOOTER */
 footer {
     border-top: 0.5rem solid var(--primary-color);
     padding-top: 2rem;
@@ -533,6 +541,7 @@ footer {
     }
 }
 
+
 /* OPEN NAVIGATION */
 .js-d-none {
     display: none;
@@ -544,9 +553,11 @@ footer {
     justify-content: space-between;
     align-items: flex-end;
     padding-right: 2rem;
-    background-color: var(--primary-color);
+    background-color: rgb(250, 250, 250);
+    box-shadow: 2px 2px 4px #aaaaaa;
     width: 60%;
     height: 70vh;
+    padding: 1rem;
 }
 
 .js-exit {
@@ -563,15 +574,7 @@ footer {
     flex-direction: column;
     align-items: flex-end;
     margin-bottom: 2rem;
-    color: var(--secondary-color);
-}
-
-.js-menu__li {
-    padding-bottom: 3rem;
-}
-
-.js-m-li__link {
-    color: var(--secondary-color);
+    line-height: 3.5rem;
 }
 
 .js-h-buttons {
